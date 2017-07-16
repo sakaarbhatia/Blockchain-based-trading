@@ -1,0 +1,50 @@
+﻿<%- include('partials/header') %>
+
+
+<div class="cont">    
+
+  <div class="demo">
+    <div class="login">
+        <% if(locals.error) { %>
+            <div class="alert alert-danger"><font size="3"><%= error %></font></div>
+        <% } %>
+        <% if(locals.success) { %>
+            <div class="alert alert-success"><%= success %></div>
+        <% } %>
+      <div class="logoPole"> 
+
+        <img src="/images/etherLogo.png" alt="ether">
+      </div>
+      <div class="login__form">
+        <div class="login__row">
+
+
+
+    <form method="post">
+
+        <div class="login__row">
+        <input type="text" name="username" class="login__input name" placeholder="Username"/>
+        </div>
+        <div class="login__row">
+               <input type="password" name="password"  class="login__input pass" placeholder="Password"/>
+        </div>
+        <button type="submit" class="login__submit">Sign in</button>
+
+
+        
+            <center><a href="/register" class="btn btn-link">Register</a></center>
+     
+        </form>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<%- include('partials/footer') %>

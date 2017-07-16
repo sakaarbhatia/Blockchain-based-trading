@@ -1,0 +1,40 @@
+﻿<div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+<div class="product">
+	 <div class="container">				
+		 <div class="product-price1">
+			 <div class="top-sing">
+				  <div class="col-md-5 single-top">	
+					 <div class="flexslider">
+							  <ul class="slides">
+								<li>
+									<div> 
+										<img src="app-content/images/{{vm.product.image}}" data-imagezoom="true" class="img-responsive" alt=""/> 
+									</div>
+								</li>
+							
+							  </ul>
+						</div>					 					 
+					 <script src="app-content/js/imagezoom.js"></script>
+
+				 </div>	
+			     <div class="col-md-5 single-top-in simpleCart_shelfItem">
+					  <div class="single-para ">
+						 <h4>{{vm.product.title}}</h4>							
+							<h5 class="item_price">{{vm.product.price}} LP</h5>							
+							<p class="para">{{vm.product.description}}</p>	
+
+							<div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="center">
+   								<md-button class="md-primary md-raised" ng-click="vm.showPrompt($event)">BUY</md-button>
+							</div>								
+					 </div>
+				 </div>
+				 <div class="clearfix"> </div>
+			 </div>
+	     </div>
+	 </div>
+</div>
+
+
+

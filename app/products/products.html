@@ -1,0 +1,35 @@
+﻿<div class="product-model">
+	<div class="container">
+		<h2>Our Products</h2>
+		<div class="col-md-12 product-model-sec">
+			<div ng-repeat="products in vm.products track by $index">
+				<a ui-sref="productDetails({ id: products._id })">
+					<div class="product-grid">
+						<div class="more-product">
+							<span></span>
+						</div>
+						<div class="product-img b-link-stripe b-animate-go  thickbox">
+							<img src="app-content/images/{{products.image}}" class="img-responsive" alt="" />
+								<div class="b-wrapper">
+									<h4 class="b-animate b-from-left  b-delay03">
+										<button>
+											<span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View
+										</button>
+									</h4>
+								</div>
+						</div>
+					<div class="product-info simpleCart_shelfItem">
+						<div class="product-info-cust prt_name">
+							<h4>{{products.title}}</h4>
+							<span class="item_price">{{products.price}} LP</span>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</a>
+				<div ng-if="$index % 2 == 0 && $index != 0">
+                    <div class="clearfix"></div>
+                 </div>
+			</div>
+		</div>
+	</div>
+</div>

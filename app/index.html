@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Blockchain Loyality</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Blockchain Loyality" />
+
+
+    <link href="app-content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <!-- Custom Theme files -->
+    <!--theme style-->
+    <link href="app-content/css/style.css" rel="stylesheet" type="text/css" media="all" />  
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- start menu -->
+    <script src="app-content/js/simpleCart.min.js"> </script>
+    <!-- start menu -->
+    <link href="app-content/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="app-content/js/memenu.js"></script>
+    <script>$(document).ready(function(){$(".memenu").memenu();});</script> 
+    <script src="app-content/js/responsiveslides.min.js"></script>
+    <script src="app-content/js/bootstrap.js"> </script>
+
+</head>
+<body ng-controller="Home.HomeController as vm">
+
+ <div class="header-top">
+     <div class="header-bottom">            
+                <div class="logo">
+                    <h1><a ui-sref="dashboard">Blockchain Shop</a></h1>                  
+                </div>
+
+             <!---->         
+             <div class="top-nav">
+                <ul class="memenu skyblue"><li class="active"><a ui-sref="dashboard">Home</a></li>
+                    <li class="grid"><a ui-sref="products">Products</a></li>
+                    <li class="grid"><a ui-sref="transfer">Transfer</a></li>                    
+                </ul>               
+             </div>
+             <!---->
+
+             <div class="cart box_1">
+                 <a>
+                    <div class="dropdown">
+                      <div class="dropbtn">
+                      <div class="total">
+                        <span style="font-weight:bold">{{vm.user.balance}} L.P.</span>
+                      </div>
+                      <span style="padding-left: 20px;"><img src="app-content/images/Login.png"></span>
+                      </div>
+                      <div class="dropdown-content">
+                        <a href="#">username : {{vm.user.username}}</a>
+                        <a href="#">LP Balance : {{vm.user.balance}}</a>
+                        <a href="#">Public Key : {{vm.user.pubKey}}</a>
+                        <a ui-sref="passbook">Passbook</a>
+                        <a href="/login" target="_self">Logout</a>
+                      </div>
+                    </div>
+                </a>
+                <div class="clearfix"> </div>
+             </div>
+
+             <div class="clearfix"> </div>
+             <!---->             
+             </div>
+            <div class="clearfix"> </div>
+</div>
+
+
+
+
+
+
+
+<div ui-view></div>
+
+
+
+
+
+<!---->
+<div class="subscribe">
+     <div class="container">
+         <h3>Blockchain Newsletter</h3>
+         <form>
+             <input type="text" class="text" value="Email">
+             <input type="submit" value="Subscribe">
+         </form>
+     </div>
+</div>
+<!---->
+
+
+<div class="footer">
+     <div class="container">
+         <div class="footer-grids">
+             <div class="col-md-3 about-us">
+                 <h3>About Us</h3>
+                 <p>This website is created to promote blockchain solutions. Group of retail organisations form a consortium agree to create a common wallet for user to redeem on useful things</p>
+             </div>
+             <div class="col-md-3 ftr-grid">
+                    <h3>Information</h3>
+                    <ul class="nav-bottom">
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">New Products</a></li>
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Our Stores</a></li>
+                        <li><a href="#">Best Sellers</a></li>   
+                    </ul>                   
+             </div>
+             <div class="col-md-3 ftr-grid">
+                    <h3>More Info</h3>
+                    <ul class="nav-bottom">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Membership</a></li> 
+                    </ul>                   
+             </div>
+             <div class="col-md-3 ftr-grid">
+                    <h3>Categories</h3>
+                    <ul class="nav-bottom">
+                        <li><a href="#">Car Lights</a></li>
+                        <li><a href="#">LED Lights</a></li>
+                        <li><a href="#">Decorates</a></li>
+                        <li><a href="#">Wall Lights</a></li>
+                        <li><a href="#">Protectors</a></li> 
+                    </ul>                   
+             </div>
+             <div class="clearfix"></div>
+         </div>
+     </div>
+</div>
+<div class="copywrite">
+     <div class="container">
+         <div class="copy">
+             <p>© 2017 Sakaar Bhatia | Layout design credit:   <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+         </div>
+         <div class="social">                           
+                <a href="#"><i class="facebook"></i></a>
+                <a href="#"><i class="twitter"></i></a>
+                <a href="#"><i class="dribble"></i></a> 
+                <a href="#"><i class="google"></i></a>  
+                <a href="#"><i class="youtube"></i></a> 
+         </div>
+         <div class="clearfix"></div>
+     </div>
+</div>  
+
+
+
+    <!-- external scripts -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+      <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/product.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="app-services/transaction.service.js"></script>
+    <script src="products/products.controller.js"></script>
+    <script src="product/product.controller.js"></script>
+    <script src="home/home.controller.js"></script>
+    <script src="passbook/passbook.controller.js"></script>
+    <script src="transfer/transfer.controller.js"></script>
+    <script src="dashboard/dashboard.controller.js"></script>
+    <script src="cart/cart.controller.js"></script>
+</body>
+</html>

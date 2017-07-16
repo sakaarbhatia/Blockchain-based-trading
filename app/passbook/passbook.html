@@ -1,0 +1,17 @@
+﻿
+<div class="product-model">
+	<div class="container" >
+		<table ng-table="vm.tableParams" class="table" show-filter="true">
+		    <tr ng-repeat="data in $data">
+		        <td title="'Date'" filter="{ transactionDate: 'text'}" sortable="'transactionDate'">
+		            {{data.transactionDate}}</td>
+		        <td title="'From'" filter="{ transactionFrom: 'text'}" sortable="'transactionFrom'">
+		            {{data.transactionFrom}} <div ng-if="data.transactionFrom == vm.isYou()">(You)</div></td>
+		        <td title="'To'" filter="{ transactionTo: 'text'}" sortable="'transactionTo'">
+		            {{data.transactionTo}} <div ng-if="data.transactionTo == vm.isYou()"">(You)</div></td>
+		        <td title="'Value'" filter="{ transactionValue: 'number'}" sortable="'transactionValue'">
+		            {{data.transactionValue}}</td>
+		    </tr>
+		</table>
+	</div>
+</div>
