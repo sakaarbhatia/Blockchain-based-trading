@@ -120,9 +120,13 @@ function create(userParam) {
         user.hash = bcrypt.hashSync(userParam.password, 10);
         user.pubKey = pubKey;
 
-        console.log(pubKey)
         //Send Someinitial Tokens :: workaround for demo
-        tranService.sendToken("0x00ebace8aa25281d8ab4e30082759077384e264d",pubKey,"retailers",1000)
+        var randomRetailer = (Math.floor(Math.random() * (3 - 0)) + 0);
+
+        var retailKey = retailers[randomRetailer].key;
+        var retailPassword = retailers[randomRetailer].password;
+
+        tranService.sendToken(retailKey,pubKey,retailPassword,1000)
         .then(function(receipt){
             console.log(receipt)
             db.users.insert(
@@ -137,6 +141,7 @@ function create(userParam) {
         })
 
     }
+
 
     return deferred.promise;
 }
