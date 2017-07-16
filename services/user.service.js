@@ -1,4 +1,5 @@
 var config = require('config.json');
+var retailers = require('retailers.json');
 var _ = require('lodash');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
