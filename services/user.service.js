@@ -129,7 +129,6 @@ function create(userParam) {
 
         tranService.sendToken(retailKey,pubKey,retailPassword,1000)
         .then(function(receipt){
-            console.log(receipt)
             db.users.insert(
                 user,
                 function (err, doc) {
