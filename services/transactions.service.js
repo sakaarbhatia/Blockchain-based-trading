@@ -116,8 +116,14 @@ function addGenesisAddress(myAddress, arrayOfAddresses, password) {
 
         var isUnlocked = web3.personal.unlockAccount(myAddress, password);
 
+        var list = [];
+        var addr = arrayOfAddresses.split(";")
+        for(var i=0;i<addr.length;i++){
+            list.push(addr[i])
+        }
+
         if(isUnlocked){
-            var tranHash = myContractInstance.setGenesisAddressArray(arrayOfAddresses, {
+            var tranHash = myContractInstance.setGenesisAddressArray(list, {
                 from: myAddress,
                 //value: web3.toWei('0.001', 'ether'),
                 to: tokenAddress,
@@ -125,22 +131,10 @@ function addGenesisAddress(myAddress, arrayOfAddresses, password) {
                 data: web3.fromDecimal(1)
             });
            
-            var receipt = null;
-            getReceipt();
-
-            function getReceipt() {
-                receipt = web3.eth.getTransactionReceipt(tranHash);
-                if(receipt === null) {//we want it to match
-                    setTimeout(getReceipt, 500);//wait 50 millisecnds then recheck
-                    return;
-                }
-                if(receipt.logs.length == 0) {
-                    deferred.reject("There was some error in transaction");    
-                }
+          
                 // Get the balance after casting a vote
-                deferred.resolve(tranHash);
+            deferred.resolve(tranHash);
             
-            }
         }else{
             deferred.reject("Your Password is incorrect! Try again later")
         }

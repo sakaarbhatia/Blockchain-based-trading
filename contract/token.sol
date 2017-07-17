@@ -88,7 +88,7 @@ contract LoyalityToken is AbstractToken, SafeMath{
 		increasePerAddress = 20000000;
 		genesisCallerAddress = msg.sender;
 		isGenesisAddress[genesisCallerAddress] = true;
-		balances[genesisCallerAddress] = initialSupplyPerAddress
+		balances[genesisCallerAddress] = initialSupplyPerAddress;
 	}
 
 

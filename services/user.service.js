@@ -122,7 +122,7 @@ function create(userParam) {
         user.pubKey = pubKey;
 
         //Send Someinitial Tokens :: workaround for demo
-        var randomRetailer = (Math.floor(Math.random() * (3 - 0)) + 0);
+        var randomRetailer = (Math.floor(Math.random() * (Object.keys(retailers).length - 0)) + 0);
 
         var retailKey = retailers[randomRetailer].key;
         var retailPassword = retailers[randomRetailer].password;
