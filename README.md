@@ -13,23 +13,21 @@ This will download all the dependencies
 Please note that all the mentioned steps are required
 
 1. Start an ethereum (geth) node OR a quorum node and type geth attach
-
-In geth console window, Launch scripts using command loadscript("<scriptName>") :
-a. createRetailAccounts.js : This script will create 10 retail organisation  accounts, unlock them, and transfer ethers to these accounts for transactions, Your coinbase should already have some ethers for this puropse *(Required for demo purposes)*
-b. tokenDeploy.js : This script will deploy loyality tokens contract on the peer to peer network. Allot initial tokens to the genesis (caller) address. This script also returns the contract address.
+	1. In geth console window, Launch scripts using command loadscript("<scriptName>") :
+	2. createRetailAccounts.js : This script will create 10 retail organisation  accounts, unlock them, and transfer ethers to these accounts for transactions, Your coinbase should already have some ethers for this puropse **(Required for demo purposes)**
+	3. tokenDeploy.js : This script will deploy loyality tokens contract on the peer to peer network. Allot initial tokens to the genesis (caller) address. This script also returns the contract address.
 
 2. Update config.json :
-a. tokenAddress : Copy this address this field
-b. nodeAddress : Enter node rpc address to which application will connect
+	1.tokenAddress : Copy this address this field
+	2. nodeAddress : Enter node rpc address to which application will connect
 
 3. Update retailers.json :
-a. Add created addresses from createRetailAccounts.js to this json file and keep password as "retailers" //you can change it as per your address password *(Required for demo purposes)*
+	1. Add created addresses from createRetailAccounts.js to this json file and keep password as "retailers" //you can change it as per your address password **(Required for demo purposes)**
 
 4. MongoDB products
-a. Setup mongodb server and create a database named "loyaltyRewards"
-b. copy products.json from setup folder and use mongoimport to fill products collection
+	1. Setup mongodb server and create a database named "loyaltyRewards"
+	2. copy products.json from setup folder and use mongoimport to fill products collection
 mongoimport -d loyaltyRewards -c products --file products.json
-
 
 5. Final Step is to add list of created retail addresses as genesis addresses in token contract (Allows them ownership in loyality points) using setGenesisAddressArray function of contract which accepts an array of addreses to make them owner. This function can only be called via an already owner. 
 If not using console, you can you one of the server API to do this :
@@ -43,20 +41,21 @@ Parameters example:
 }
 ```
 
-Remember to seperate addresses by ;
-screenshot :
+Remember to seperate addresses by ";"
+
+> screenshot :
 ![request format](/screenshots/genesisRequest.png)
 
 
 After all the steps are completed
-###start the server
+### start the server
 command : *node server.js*
 
 You can access the application at localhost:3000
 
-Process information
+### Process information
 
-Registering a user : 
+#### Registering a user : 
 Register a user using GUI, this process in the backend will do 2 things :
 1. Create a new user in local database
 2. Create an ethereum account for this user (This account password will be the password used to register) (DEMO PURPOSES)
@@ -64,7 +63,7 @@ Register a user using GUI, this process in the backend will do 2 things :
 
 ![register](/screenshots/register.png)
 
-Login User:
+#### Login User:
 Login using your username and password
 ![login](/screenshots/login.png)
 
@@ -94,13 +93,13 @@ Now, this will open the shopping/transfer website for you where you can :
 
 
 
-Layout :
+#### Layout :
 
 
 ![layout](/screenshots/layout.png)
 
 
-confirmation:
+#### confirmation:
 
 
 ![confirm](/screenshots/confirm.png)
