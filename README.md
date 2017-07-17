@@ -1,7 +1,5 @@
 # Loyalty rewards on blockchain
 
-Refer to screenshots folder for system look!
-
 ## Setup
 1. clone the repository to local directory
 2. go to blockchain-based-trading folder
@@ -58,8 +56,8 @@ You can access the application at localhost:3000
 #### Registering a user : 
 Register a user using GUI, this process in the backend will do 2 things :
 1. Create a new user in local database
-2. Create an ethereum account for this user (This account password will be the password used to register) (DEMO PURPOSES)
-3. Select a random account from retailers.json, which will transfer some initial tokens from retailer account to user account. *(DEMO PURPOSES)*
+2. Create an ethereum account for this user (This account password will be the password used to register) **(DEMO PURPOSES)**
+3. Select a random account from retailers.json, which will transfer some initial tokens from retailer account to user account. **(DEMO PURPOSES)**
 
 ![register](/screenshots/register.png)
 
@@ -72,34 +70,8 @@ Now, this will open the shopping/transfer website for you where you can :
 ![landing page](/screenshots/landingPage.png)
 
 
-#### 1. Buy a product using your loyality points
+1. Buy a product using your loyality points
+2. Transfer your loyality points to any other user using his public key
+3. View your passbook
 
-![products](/screenshots/products.png)
-
-
-![buy](/screenshots/buy.png)
-
-
-
-#### 2. Transfer your loyality points to any other user using his public key
-
-![transfer](/screenshots/transfer.png)
-
-
-
-#### 3. View your passbook
-
-![passbook](/screenshots/passbook.png)
-
-
-
-#### Layout :
-
-
-![layout](/screenshots/layout.png)
-
-
-#### confirmation:
-
-
-![confirm](/screenshots/confirm.png)
+Refer to screenshots folder for system look!
