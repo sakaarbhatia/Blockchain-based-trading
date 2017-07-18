@@ -62,7 +62,7 @@
                         <a href="#">LP Balance : {{vm.user.balance}}</a>
                         <a href="#">Public Key : {{vm.user.pubKey}}</a>
                         <a ui-sref="passbook">Passbook</a>
-                        <a href="/login" target="_self">Logout</a>
+                        <a href="/login" target="_self"><span ng-click="vm.clearUserSession()">Logout</span></a>
                       </div>
                     </div>
                 </a>
