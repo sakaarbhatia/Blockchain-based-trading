@@ -9,7 +9,8 @@
         var vm = this;
 
         vm.user = null;
-
+        vm.clearUserSession = clearUserSession
+        
         initController();
 
         function initController() {
@@ -31,6 +32,11 @@
             });
 
 
+        }
+        
+        function clearUserSession(){
+            //clears user session on click on logout button
+            sessionStorage.clear();
         }
 
 
