@@ -16,7 +16,7 @@ Please note that all the mentioned steps are required
 	3. tokenDeploy.js : This script will deploy loyality tokens contract on the peer to peer network. Allot initial tokens to the genesis (caller) address. This script also returns the contract address.
 
 2. Update config.json :
-	1.tokenAddress : Copy this address this field
+	1.tokenAddress : Copy the address returned by tokenDeploy.js in this field
 	2. nodeAddress : Enter node rpc address to which application will connect
 
 3. Update retailers.json :
@@ -40,9 +40,6 @@ Parameters example:
 ```
 
 Remember to seperate addresses by ";"
-
-> screenshot :
-![request format](/screenshots/genesisRequest.png)
 
 
 After all the steps are completed
