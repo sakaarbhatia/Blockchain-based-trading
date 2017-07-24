@@ -18,7 +18,7 @@ app.use(session({ secret: config.secret, resave: false, saveUninitialized: true 
 app.use(express.static('app/app-content'))
 
 // use JWT auth to secure the api
-app.use('/api', expressJwt({ secret: config.secret }).unless({ path: ['/api/users/authenticate', '/api/users/register', '/api/products/add', '/api/transaction/balance'] }));
+app.use('/api', expressJwt({ secret: config.secret }).unless({ path: ['/api/users/authenticate', '/api/users/register', '/api/products/add', '/api/transaction/balance', '/api/transaction/genesis'] }));
 
 Web3.connectToEthereumNode()
 mongoUtil.connectToMongoServer(); 
