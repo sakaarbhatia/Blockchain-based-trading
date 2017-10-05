@@ -56,11 +56,8 @@ Register a user using GUI, this process in the backend will do 2 things :
 2. Create an ethereum account for this user (This account password will be the password used to register) **(DEMO PURPOSES)**
 3. Select a random account from retailers.json, which will transfer some initial tokens from retailer account to user account. **(DEMO PURPOSES)**
 
-![register](/screenshots/register.png)
-
 #### Login User:
 Login using your username and password
-![login](/screenshots/login.png)
 
 Now, this will open the shopping/transfer website for you where you can :
 
